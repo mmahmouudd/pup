@@ -1166,23 +1166,6 @@
       </div>
     </section>
 
-    <!-- Candidate Persona Bar -->
-    <section class="persona-bar">
-      <div class="persona-profile">
-        <div class="persona-avatar">⭐</div>
-        <div class="persona-info">
-          <h2>ملف المرشح المستهدف: شيف محترف بخبرة قيادية (+15 سنة)</h2>
-          <p>العمر: ~39 سنة (حتى 44 سنة) · التخصص: إدارة مطابخ، مطاعم شرقية، سخن ومشويات (بعيداً عن قطاع المنتجعات والفنادق السياحية البعيدة)</p>
-        </div>
-      </div>
-      <div class="persona-badges">
-        <span class="p-badge highlight">💼 إدارة وتشغيل</span>
-        <span class="p-badge highlight">💰 رواتب 15k - 35k</span>
-        <span class="p-badge">📍 الزقازيق ومحيطها</span>
-        <span class="p-badge">🏠 التجمع (مع سكن)</span>
-      </div>
-    </section>
-
     <!-- Comprehensive Filter Panel -->
     <section class="filter-panel">
       <!-- Search Input -->
@@ -1193,7 +1176,7 @@
             type="text" 
             id="searchInput" 
             class="search-input" 
-            placeholder="ابحث باسم الوظيفة (مثلاً: شيف عمومي، مدير مطبخ، العاشر، التجمع، مشويات، سكن)..." 
+            placeholder="ابحث باسم الوظيفة (مثلاً: شيف عمومي، مدير مطبخ، العاشر، التجمع، منتجع، مشويات، سكن)..." 
             autocomplete="off"
           />
           <button class="clear-search-btn" id="clearSearchBtn" title="مسح البحث">✕</button>
@@ -1211,6 +1194,7 @@
           <button class="chip-btn" data-chip="executive">👑 شيف عمومي وإدارة</button>
           <button class="chip-btn" data-chip="zagazig">🎯 داخل الزقازيق (دقائق معدودة)</button>
           <button class="chip-btn" data-chip="ramadan_badr">🚌 العاشر من رمضان وبدر</button>
+          <button class="chip-btn" data-chip="resorts">🏖️ فنادق ومنتجعات (إقامة كاملة)</button>
           <button class="chip-btn" data-chip="housing">🏠 متوفر سكن للمغتربين</button>
           <button class="chip-btn" data-chip="hot_grill">🥩 مشويات وسخن</button>
         </div>
@@ -1238,6 +1222,7 @@
             <option value="zagazig">الزقازيق والشرقية (بدون سفر)</option>
             <option value="ramadan_badr">العاشر من رمضان وبدر (~35-45 دقيقة)</option>
             <option value="cairo_tagamoa">القاهرة والتجمع ومدينتي (رواتب كبرى + سكن)</option>
+            <option value="resorts">🏖️ فنادق ومنتجعات سياحية (إقامة فندقية كاملة)</option>
           </select>
         </div>
 
@@ -1984,6 +1969,118 @@
         applyUrl: "https://www.jobs-arab.com/eg/jobs/781003/",
         mapsDest: "القاهرة مصر",
         contactMessage: "السلام عليكم، بخصوص فرصة شيف عمومي بمطاعم الشرقي بالقاهرة. أنا شيف عمومي خبرة أكثر من 15 سنة في الأكلات الشرقية والمشويات وإدارة المطابخ وتدريب الطهاة، عمري 39 سنة ومقيم بالزقازيق. يسعدني التواصل لمعرفة باقي التفاصيل وتحديد موعد للمقابلة الشخصية."
+      },
+      {
+        id: "job-23",
+        title: "شيف عمومي / رئيس طهاة (Executive Chef) · منتجع وقرية سياحية",
+        employer: "منتجع وقرية سياحية 4 نجوم · العين السخنة",
+        location: "العين السخنة، البحر الأحمر",
+        locationZone: "resorts",
+        commutePill: "🏖️ العين السخنة - إقامة فندقية كاملة و3 وجبات",
+        isLocal: false,
+        payDisplay: "٢٢٬٠٠٠ – ٣٠٬٠٠٠ جنيه",
+        paySub: "صافي شهري + بدلات سفر ونسب",
+        payMin: 22000,
+        payMax: 30000,
+        payTier: "over20",
+        roleCategory: "executive",
+        matchScore: 98,
+        matchReason: "يكسر الـ 20 ألف + قيادة مطبخ القرية + لا يشترط مؤهل سياحة وفنادق (خبرة عملية فقط)",
+        dateTag: "إقامة فندقية كاملة",
+        ageReq: "٣٢ – ٤٨ سنة (مطابق لسن 39)",
+        expReq: "١٠+ سنوات خبرة عملية في قيادة المطابخ",
+        eduReq: "بدون شرط مؤهل سياحة وفنادق (الاعتماد على الخبرة)",
+        perks: ["إقامة فندقية بغرفة خاصة مكيفة", "٣ وجبات بوفيه مفتوح يومياً", "نظام عمل ٢٣ يوم / ٧ أيام إجازة مجمعة", "بدل انتقالات"],
+        brief: "إدارة مطبخ القرية السياحية بالكامل، الإشراف على البوفيه المفتوح والمطعم الشرقي، قيادة الشيفات، وضبط تكلفة الغذاء (Food Cost).",
+        advisory: "فرصة كبرى تكسر الـ 20 ألف مع صفر مصاريف معيشة (إقامة فندقية ووجبات مجانية طوال فترة العمل). لا يشترط شهادة سياحة وفنادق.",
+        tags: ["يكسر الـ 20 ألف 🚀", "إقامة فندقية 🏖️", "شيف عمومي", "بدون شرط مؤهل"],
+        applyUrl: "https://www.jobs-arab.com/eg/jobs/",
+        mapsDest: "العين السخنة السويس",
+        contactMessage: "السلام عليكم، بخصوص وظيفة شيف عمومي بقرية ومنتجع العين السخنة. أنا شيف خبرة أكثر من 15 سنة في إدارة المطابخ والبوفيهات والأكلات الشرقية والسخن، عمري 39 سنة ومقيم بالزقازيق، والخبرة عملية ميدانية قوية. هل الوظيفة متاحة؟ وما هو نظام الورديات والإجازات المجمعة؟ شكراً لحضراتكم."
+      },
+      {
+        id: "job-24",
+        title: "سو شيف (Sous Chef) وإشراف مطبخ رئيسي · منتجع سياحي راقي",
+        employer: "مجموعة منتجعات وفنادق سياحية · شرم الشيخ",
+        location: "شرم الشيخ، جنوب سيناء",
+        locationZone: "resorts",
+        commutePill: "🏖️ شرم الشيخ - سكن فندقي وتذاكر طيران/أتوبيس",
+        isLocal: false,
+        payDisplay: "١٨٬٠٠٠ – ٢٤٬٠٠٠ جنيه",
+        paySub: "أساسي + نسبة خدمة وتبس فندقي شهري",
+        payMin: 18000,
+        payMax: 24000,
+        payTier: "over20",
+        roleCategory: "executive",
+        matchScore: 96,
+        matchReason: "رواتب مجزية تكسر الـ 20k + سكن فندقي + يقبل أصحاب الخبرة العملية دون شرط مؤهل",
+        dateTag: "إجازات مجمعة مدفوعة",
+        ageReq: "٣٠ – ٤٦ سنة (مطابق لسن 39)",
+        expReq: "٨+ سنوات في المطابخ الفندقية والمطاعم الكبرى",
+        eduReq: "جميع المؤهلات مقبولة (الأولوية للخبرة والمهارة)",
+        perks: ["سكن فندقي مكيف ومجهز", "٣ وجبات يومياً", "تذاكر سفر وإجازة أسبوع كل شهر", "تأمينات شاملة"],
+        brief: "المساعد المباشر للشيف التنفيذي، تنظيم خطوط الطهي الساخن والبارد، متابعة جودة الأصناف والبوفيهات، والإشراف على طاقم الطهاة.",
+        advisory: "الوظيفة تعتمد بنسبة 100% على الخبرة والتطبيق العملي (تيست المطبخ) ولا تشترط مؤهل سياحة وفنادق.",
+        tags: ["يكسر الـ 20 ألف 🚀", "شرم الشيخ 🏖️", "سو شيف", "سكن فندقي"],
+        applyUrl: "https://www.jobs-arab.com/eg/jobs/",
+        mapsDest: "شرم الشيخ جنوب سيناء",
+        contactMessage: "السلام عليكم، بخصوص وظيفة سو شيف بالمنتجع السياحي في شرم الشيخ. أنا شيف خبرة 15+ سنة في قسم السخن والمطابخ الشرقية وإدارة الأطقم، عمري 39 سنة مقيم بالزقازيق. هل الإعلان متاح حالياً؟ وأود الاستفسار عن تفاصيل تذاكر السفر والراتب الصافي الشامل. خالص الشكر."
+      },
+      {
+        id: "job-25",
+        title: "شيف ديبارتي سخن ومشويات (Chef De Partie) · منتجع ساحلي 5 نجوم",
+        employer: "فندق وقرية سياحية كبرى · الغردقة",
+        location: "الغردقة، البحر الأحمر",
+        locationZone: "resorts",
+        commutePill: "🏖️ الغردقة - سكن مجهز و3 وجبات",
+        isLocal: false,
+        payDisplay: "١٦٬٠٠٠ – ٢٢٬٠٠٠ جنيه",
+        paySub: "شامل الأساسي ونسبة الخدمة والحوافز",
+        payMin: 16000,
+        payMax: 22000,
+        payTier: "15to20",
+        roleCategory: "hot_grill",
+        matchScore: 95,
+        matchReason: "خبرة عملية فقط بدون شرط مؤهل + سكن وإعاشة كاملة + مشويات وسخن",
+        dateTag: "إقامة وإعاشة كاملة",
+        ageReq: "٢٨ – ٤٨ سنة (مطابق لسن 39)",
+        expReq: "٦+ سنوات خبرة في ركن السخن والمشويات",
+        eduReq: "خبرة مهنية عملية (غير مشترط مؤهل متخصص)",
+        perks: ["سكن للعاملين مكيف", "٣ وجبات بوفيه يومياً", "راحة مجمعة شهرية", "تأمين طبي واجتماعي"],
+        brief: "مسؤول قسم السخن والمشويات الشرقية للبوفيه المفتوح والمطاعم المتخصصة بالمنتجع، وضمان معايير الهاسب والنظافة.",
+        advisory: "الغردقة توفر بيئة عمل سياحية متميزة مع توفير كامل للاحتياجات المعيشية وتذاكر السفر.",
+        tags: ["الغردقة 🏖️", "مشويات وسخن", "بدون شرط مؤهل", "سكن كامل"],
+        applyUrl: "https://www.jobs-arab.com/eg/jobs/",
+        mapsDest: "الغردقة البحر الأحمر",
+        contactMessage: "السلام عليكم، أستفسر عن وظيفة شيف ديبارتي سخن ومشويات بالقرية السياحية في الغردقة. أنا شيف خبرة تتجاوز 15 سنة في الأكلات الشرقية والمشويات والسخن، عمري 39 سنة ومقيم بالزقازيق. أرجو معرفة إمكانية عمل التيست العملي وتفاصيل التعاقد. شكراً لكم."
+      },
+      {
+        id: "job-26",
+        title: "طاهي أول ورئيس قسم السخن · منتجع سياحي 4 نجوم",
+        employer: "منتجع سياحي وقرية شاطئية · رأس سدر",
+        location: "رأس سدر، جنوب سيناء",
+        locationZone: "resorts",
+        commutePill: "🏖️ رأس سدر - ~ساعتين من السويس والإسماعيلية",
+        isLocal: false,
+        payDisplay: "١٥٬٠٠٠ – ١٩٬٠٠٠ جنيه",
+        paySub: "صافي مضمون + إقامة فندقية ووجبات",
+        payMin: 15000,
+        payMax: 19000,
+        payTier: "15to20",
+        roleCategory: "hot_grill",
+        matchScore: 93,
+        matchReason: "سكن فندقي كامل + بدون اشتراط سياحة وفنادق + قريب نسبياً من القناة والشرقية",
+        dateTag: "سكن وإعاشة",
+        ageReq: "مفتوح لأصحاب الكفاءة والخبرة الطويلة",
+        expReq: "خبرة عملية في المطبخ الشرقي والسخن",
+        eduReq: "مؤهل متوسط أو خبرة عملية",
+        perks: ["سكن فندقي مجهز", "٣ وجبات كاملة", "إجازات أسبوعية مجمعة", "تأمينات"],
+        brief: "إعداد قوائم السخن والطواجن والمشويات لنزلاء القرية السياحية وضبط خروج الوجبات في أوقات الذروة.",
+        advisory: "رأس سدر تتميز بقربها النسبي عبر نفق الشهيد أحمد حمدي، وتناسب من يريد الاستقرار في منتجع هادئ بإقامة كاملة.",
+        tags: ["رأس سدر 🏖️", "إقامة كاملة", "أكل شرقي", "بدون شرط مؤهل"],
+        applyUrl: "https://www.jobs-arab.com/eg/jobs/",
+        mapsDest: "رأس سدر جنوب سيناء",
+        contactMessage: "السلام عليكم، بخصوص وظيفة طاهي أول ورئيس قسم السخن بمنتجع رأس سدر. أنا شيف خبرة أكثر من 15 سنة في المطابخ والأكلات الشرقية والسخن، عمري 39 سنة مقيم بالزقازيق. هل الإعلان متاح؟ وأود معرفة نظام الإجازات والسكن. خالص الشكر."
       }
     ];
 
@@ -2091,7 +2188,8 @@
         if (activeQuickChip === 'executive' && job.roleCategory !== 'executive') return false;
         if (activeQuickChip === 'zagazig' && job.locationZone !== 'zagazig') return false;
         if (activeQuickChip === 'ramadan_badr' && job.locationZone !== 'ramadan_badr') return false;
-        if (activeQuickChip === 'housing' && !job.perks.some(p => p.includes('سكن') || p.includes('مغتربين'))) return false;
+        if (activeQuickChip === 'resorts' && job.locationZone !== 'resorts') return false;
+        if (activeQuickChip === 'housing' && !job.perks.some(p => p.includes('سكن') || p.includes('مغتربين') || p.includes('إقامة'))) return false;
         if (activeQuickChip === 'hot_grill' && job.roleCategory !== 'hot_grill') return false;
 
         // Search text matching
@@ -2119,8 +2217,8 @@
         if (sortVal === 'salaryDesc') {
           return b.payMax - a.payMax;
         } else if (sortVal === 'nearFirst') {
-          // Zagazig first, then Ramadan/Badr, then Cairo
-          const zoneOrder = { 'zagazig': 1, 'ramadan_badr': 2, 'cairo_tagamoa': 3 };
+          // Zagazig first, then Ramadan/Badr, then Cairo, then Resorts
+          const zoneOrder = { 'zagazig': 1, 'ramadan_badr': 2, 'cairo_tagamoa': 3, 'resorts': 4 };
           return (zoneOrder[a.locationZone] || 9) - (zoneOrder[b.locationZone] || 9);
         } else if (sortVal === 'newest') {
           return b.matchScore - a.matchScore;
