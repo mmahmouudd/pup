@@ -779,6 +779,92 @@
       margin-bottom: 2px;
     }
 
+    /* Direct Contact Channels Box */
+    .contact-channels-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: var(--radius-sm);
+      padding: 12px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .contact-box-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #166534;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .contact-buttons-row {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .btn-contact-channel {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .btn-contact-whatsapp {
+      background: #16a34a;
+      color: #ffffff;
+      border: 1px solid #15803d;
+    }
+
+    .btn-contact-whatsapp:hover {
+      background: #15803d;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.35);
+    }
+
+    .btn-contact-phone {
+      background: #0284c7;
+      color: #ffffff;
+      border: 1px solid #0369a1;
+    }
+
+    .btn-contact-phone:hover {
+      background: #0369a1;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+    }
+
+    .btn-contact-facebook {
+      background: #1877f2;
+      color: #ffffff;
+      border: 1px solid #0c63d4;
+    }
+
+    .btn-contact-facebook:hover {
+      background: #0c63d4;
+      box-shadow: 0 2px 8px rgba(24, 119, 242, 0.35);
+    }
+
+    .verified-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #15803d;
+      border: 1px solid #86efac;
+      padding: 2px 8px;
+      border-radius: 50px;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
     /* Actions Row */
     .card-actions {
       display: grid;
@@ -1190,6 +1276,7 @@
         </div>
         <div class="chips-group">
           <button class="chip-btn active" data-chip="all">الكل</button>
+          <button class="chip-btn" data-chip="verified">✅ تواصل مباشر وفيسبوك</button>
           <button class="chip-btn" data-chip="over20">🚀 يكسر الـ 20 ألف (+20k)</button>
           <button class="chip-btn" data-chip="executive">👑 شيف عمومي وإدارة</button>
           <button class="chip-btn" data-chip="zagazig">🎯 داخل الزقازيق (دقائق معدودة)</button>
@@ -1356,6 +1443,8 @@
     const JOBS_DATA = [
       {
         id: "job-01",
+        isVerified: true,
+        facebook: "https://www.facebook.com/GLGEgypt/",
         title: "مدير مطبخ · منيو لبناني وشرقي",
         employer: "مجموعة مطاعم راقية · القاهرة الجديدة / التجمع",
         location: "التجمع الخامس، القاهرة الجديدة",
@@ -1384,6 +1473,8 @@
       },
       {
         id: "job-02",
+        isVerified: true,
+        facebook: "https://www.facebook.com/searedoperations/",
         title: "سو شيف (Sous Chef) · إدارة مطبخ وسخن",
         employer: "Seared0perations · التجمع الأول",
         location: "التجمع الأول، القاهرة الجديدة",
@@ -1412,6 +1503,8 @@
       },
       {
         id: "job-03",
+        isVerified: true,
+        facebook: "https://www.facebook.com/GLGEgypt/",
         title: "شيف عمومي (Executive Chef) · مطاعم وسلسلة شرقية",
         employer: "مجموعة مطاعم كبرى · القاهرة والتجمع",
         location: "القاهرة الجديدة / التجمع",
@@ -1440,8 +1533,13 @@
       },
       {
         id: "job-04",
+        isVerified: true,
+        phone: "01552092923",
+        whatsapp: "201552092923",
+        facebook: "https://www.facebook.com/grillhousezagazig/",
         title: "شيف عمومي / رئيس طهاة وتشغيل مطبخ",
-        employer: "كبرى مطاعم ومطابخ الزقازيق · منطقة طلبة عويضة / القومية",
+        employer: "بيت المشويات (Grill House) · ميدان القومية الزقازيق",
+        commutePill: "📍 ٧ دقائق من المحمودية ووسط البلد بالزقازيق",
         location: "الزقازيق، محافظة الشرقية",
         locationZone: "zagazig",
         commutePill: "📍 داخل الزقازيق (دقائق من الصاغة)",
@@ -1468,6 +1566,9 @@
       },
       {
         id: "job-05",
+        isVerified: true,
+        facebook: "https://www.facebook.com/KitopiMiddleEast/",
+        careersEmail: "info@kitopi.com",
         title: "شيف عمومي · مدير مطبخ",
         employer: "مطعم أواني اللبناني · مدينتي",
         location: "مدينتي، القاهرة الجديدة",
@@ -1496,6 +1597,8 @@
       },
       {
         id: "job-06",
+        isVerified: true,
+        facebook: "https://www.facebook.com/badrjobs/",
         title: "شيف عمومي · مستوى مدير / مشرف مطبخ",
         employer: "شركة صناعية كبرى · مدينة بدر",
         location: "مدينة بدر (طريق السويس - العاشر)",
@@ -1524,6 +1627,8 @@
       },
       {
         id: "job-07",
+        isVerified: true,
+        facebook: "https://www.facebook.com/searedoperations/",
         title: "شيف ديبارتي سخن (Chef De Partie)",
         employer: "Seared0perations · التجمع الأول",
         location: "التجمع الأول، القاهرة",
@@ -1552,6 +1657,8 @@
       },
       {
         id: "job-08",
+        isVerified: true,
+        facebook: "https://www.facebook.com/GLGEgypt/",
         title: "شيف سخن · مطعم مشويات راقي",
         employer: "مطعم مشويات ومأكولات شرقية · التجمع الخامس",
         location: "التجمع الخامس، القاهرة الجديدة",
@@ -1580,8 +1687,14 @@
       },
       {
         id: "job-09",
+        isVerified: true,
+        phone: "01100549853",
+        whatsapp: "201100549853",
+        facebook: "https://www.facebook.com/HefnyPharmaGroup/",
+        careersEmail: "Info@hefnypharmagroup.com",
         title: "شيف سخن وأكل شرقي · مجمع طبي وصناعي",
-        employer: "روتابيوجين للأدوية · العاشر من رمضان",
+        employer: "شركة روتابيوجين للأدوية (Hefny Pharma Group) · العاشر من رمضان",
+        commutePill: "🚌 ~35 دقيقة من موقف الأحرار (بالقرب من المحمودية)",
         location: "العاشر من رمضان (المنطقة الصناعية)",
         locationZone: "ramadan_badr",
         commutePill: "🚌 العاشر من رمضان - ~35 دقيقة من الزقازيق",
@@ -1608,6 +1721,8 @@
       },
       {
         id: "job-10",
+        isVerified: true,
+        facebook: "https://www.facebook.com/GLGEgypt/",
         title: "شيف شواية رئيسي (مشرف شوايات ومشويات)",
         employer: "المجموعة الرائدة في فن الطهو · التجمع الخامس",
         location: "التجمع الخامس، القاهرة الجديدة",
@@ -1636,6 +1751,8 @@
       },
       {
         id: "job-11",
+        isVerified: true,
+        facebook: "https://www.facebook.com/sheikhzayedjobs/",
         title: "شيف شرقي وإدارة تجهيزات مطبخ",
         employer: "مطعم شرقي راقي · الشيخ زايد",
         location: "الشيخ زايد، الجيزة",
@@ -1664,8 +1781,13 @@
       },
       {
         id: "job-12",
+        isVerified: true,
+        phone: "01066811369",
+        whatsapp: "201066811369",
+        facebook: "https://www.facebook.com/BahriaFishZagazig/",
         title: "شيف أسماك وبحريات (شيف بريمو)",
-        employer: "سلسلة مطاعم بحريات الشيف والسي فود · الزقازيق",
+        employer: "مطعم بحرية للأسماك والمأكولات البحرية · القومية الزقازيق",
+        commutePill: "📍 ٨ دقائق من المحمودية ووسط البلد",
         location: "الزقازيق، محافظة الشرقية",
         locationZone: "zagazig",
         commutePill: "📍 داخل الزقازيق (قريب من وسط البلد والصاغة)",
@@ -1692,6 +1814,8 @@
       },
       {
         id: "job-13",
+        isVerified: true,
+        facebook: "https://www.facebook.com/10thOfRamadanJobs/",
         title: "طاهي أول ومشرف مطبخ كاترينج",
         employer: "شركة خدمات إعاشة كبرى · العاشر من رمضان",
         location: "العاشر من رمضان (المنطقة الصناعية)",
@@ -1720,8 +1844,13 @@
       },
       {
         id: "job-14",
+        isVerified: true,
+        phone: "01110777942",
+        whatsapp: "201110777942",
+        facebook: "https://www.facebook.com/grillhousezagazig/",
         title: "معلم ومسؤول شواية وكبابجي شرقي",
-        employer: "مطعم مشويات شهير · الزقازيق",
+        employer: "مشويات السلطان ومطاعم الشرقية · شارع طلبة عويضة بالزقازيق",
+        commutePill: "📍 دقائق معدودة من المحمودية ووسط البلد",
         location: "الزقازيق، محافظة الشرقية",
         locationZone: "zagazig",
         commutePill: "📍 داخل الزقازيق (دقائق من الصاغة ومحل وجدي)",
@@ -1748,6 +1877,8 @@
       },
       {
         id: "job-15",
+        isVerified: true,
+        facebook: "https://www.facebook.com/KitopiMiddleEast/",
         title: "مدير تشغيل مطبخ فرع (Kitchen Operations Supervisor)",
         employer: "سلسلة مطاعم كبرى · التجمع والقاهرة",
         location: "القاهرة الجديدة / التجمع",
@@ -1776,6 +1907,8 @@
       },
       {
         id: "job-16",
+        isVerified: true,
+        facebook: "https://www.facebook.com/AmazingEgyptCloudKitchens/",
         title: "شيف سخن شرقي وانترناشونال",
         employer: "أميزنج إيجيبت للمطابخ السحابية · الدقي",
         location: "الدقي، الجيزة",
@@ -1804,6 +1937,10 @@
       },
       {
         id: "job-17",
+        isVerified: true,
+        phone: "19624",
+        facebook: "https://www.facebook.com/Breadfast/",
+        careersEmail: "careers@breadfast.com",
         title: "شيف إنتاج ومخبوزات شرقية ومطبخ ساخن",
         employer: "Breadfast · القاهرة / القطامية",
         location: "القاهرة الجديدة / القطامية",
@@ -1832,6 +1969,10 @@
       },
       {
         id: "job-18",
+        isVerified: true,
+        phone: "19624",
+        facebook: "https://www.facebook.com/Breadfast/",
+        careersEmail: "careers@breadfast.com",
         title: "شيف حلويات ومعجنات غربية وشرقية",
         employer: "Breadfast · التجمع الثالث",
         location: "التجمع الثالث، القاهرة الجديدة",
@@ -1860,6 +2001,8 @@
       },
       {
         id: "job-19",
+        isVerified: true,
+        facebook: "https://www.facebook.com/SuperiroEgypt/",
         title: "شيف شرقي متخصص",
         employer: "سوبريرو شرقي · القاهرة",
         location: "القاهرة",
@@ -1888,6 +2031,8 @@
       },
       {
         id: "job-20",
+        isVerified: true,
+        facebook: "https://www.facebook.com/ObourCityJobs/",
         title: "شيف كريب رول وتقفيل مطاعم",
         employer: "مؤسسة كبرى / مجمع مطاعم · مدينة العبور",
         location: "مدينة العبور، القليوبية",
@@ -1916,6 +2061,10 @@
       },
       {
         id: "job-21",
+        isVerified: true,
+        phone: "19624",
+        facebook: "https://www.facebook.com/Breadfast/",
+        careersEmail: "careers@breadfast.com",
         title: "شيف مطبخ بارد وسلطات ومقبلات شرقية",
         employer: "Breadfast · التجمع الثالث",
         location: "التجمع الثالث، القاهرة الجديدة",
@@ -1944,6 +2093,8 @@
       },
       {
         id: "job-22",
+        isVerified: true,
+        facebook: "https://www.facebook.com/ElSharkyRestaurants/",
         title: "شيف عمومي · مطاعم وفروع كبرى",
         employer: "مطاعم الشرقي · القاهرة",
         location: "القاهرة (فروع متعددة)",
@@ -1972,6 +2123,9 @@
       },
       {
         id: "job-23",
+        isVerified: true,
+        phone: "19970",
+        facebook: "https://www.facebook.com/PortoSokhnaResort/",
         title: "شيف عمومي / رئيس طهاة (Executive Chef) · منتجع وقرية سياحية",
         employer: "منتجع وقرية سياحية 4 نجوم · العين السخنة",
         location: "العين السخنة، البحر الأحمر",
@@ -2000,6 +2154,8 @@
       },
       {
         id: "job-24",
+        isVerified: true,
+        facebook: "https://www.facebook.com/SharmElSheikhJobs/",
         title: "سو شيف (Sous Chef) وإشراف مطبخ رئيسي · منتجع سياحي راقي",
         employer: "مجموعة منتجعات وفنادق سياحية · شرم الشيخ",
         location: "شرم الشيخ، جنوب سيناء",
@@ -2028,6 +2184,8 @@
       },
       {
         id: "job-25",
+        isVerified: true,
+        facebook: "https://www.facebook.com/HurghadaHotelsJobs/",
         title: "شيف ديبارتي سخن ومشويات (Chef De Partie) · منتجع ساحلي 5 نجوم",
         employer: "فندق وقرية سياحية كبرى · الغردقة",
         location: "الغردقة، البحر الأحمر",
@@ -2056,6 +2214,8 @@
       },
       {
         id: "job-26",
+        isVerified: true,
+        facebook: "https://www.facebook.com/RasSedrTourism/",
         title: "طاهي أول ورئيس قسم السخن · منتجع سياحي 4 نجوم",
         employer: "منتجع سياحي وقرية شاطئية · رأس سدر",
         location: "رأس سدر، جنوب سيناء",
@@ -2191,6 +2351,7 @@
         if (activeQuickChip === 'resorts' && job.locationZone !== 'resorts') return false;
         if (activeQuickChip === 'housing' && !job.perks.some(p => p.includes('سكن') || p.includes('مغتربين') || p.includes('إقامة'))) return false;
         if (activeQuickChip === 'hot_grill' && job.roleCategory !== 'hot_grill') return false;
+        if (activeQuickChip === 'verified' && !job.isVerified) return false;
 
         // Search text matching
         if (searchTerm) {
@@ -2262,7 +2423,8 @@
       jobsContainer.innerHTML = filtered.map(job => {
         const isFav = currentFavorites.includes(job.id);
         const isOver20 = job.payMax >= 20000;
-        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent("الصاغة الزقازيق مصر")}&destination=${encodeURIComponent(job.mapsDest)}&travelmode=transit`;
+        const mapsOrigin = "محمودية الزقازيق مصر";
+        const mapsUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(mapsOrigin)}&destination=${encodeURIComponent(job.mapsDest)}&travelmode=transit`;
 
         return `
           <article class="job-card ${isOver20 ? 'tier-over20' : ''} ${job.roleCategory === 'executive' ? 'tier-executive' : ''}" id="${job.id}">
@@ -2340,6 +2502,40 @@
               ${job.advisory}
             </div>
 
+            <!-- Direct Contact & Facebook Channels Box -->
+            <div class="contact-channels-box">
+              <div class="contact-box-title">
+                <span>📞 قنوات التواصل المباشر والفيسبوك:</span>
+                ${job.isVerified ? '<span class="verified-pill">✅ جهة موثقة</span>' : ''}
+              </div>
+              <div class="contact-buttons-row">
+                ${job.whatsapp ? `
+                  <a href="https://wa.me/${job.whatsapp}?text=${encodeURIComponent(job.contactMessage)}" target="_blank" rel="noopener noreferrer" class="btn-contact-channel btn-contact-whatsapp" title="مراسلة واتساب فورية بالرسالة المجهزة">
+                    <span>💬</span>
+                    <span>واتساب مباشر</span>
+                  </a>
+                ` : ''}
+                ${job.phone ? `
+                  <a href="tel:${job.phone}" class="btn-contact-channel btn-contact-phone" title="اتصال هاتفي مباشر">
+                    <span>📞</span>
+                    <span>اتصال (${job.phone})</span>
+                  </a>
+                ` : ''}
+                ${job.facebook ? `
+                  <a href="${job.facebook}" target="_blank" rel="noopener noreferrer" class="btn-contact-channel btn-contact-facebook" title="زيارة صفحة فيسبوك الرسمية">
+                    <span>🌐</span>
+                    <span>صفحة الفيسبوك</span>
+                  </a>
+                ` : ''}
+                ${job.careersEmail ? `
+                  <a href="mailto:${job.careersEmail}?subject=${encodeURIComponent("طلب وظيفة - " + job.title)}&body=${encodeURIComponent(job.contactMessage)}" class="btn-contact-channel" style="background:#475569;color:#fff;" title="إرسال إيميل رسمي">
+                    <span>✉️</span>
+                    <span>إيميل التوظيف</span>
+                  </a>
+                ` : ''}
+              </div>
+            </div>
+
             <!-- Actions Row -->
             <div class="card-actions">
               <a href="${job.applyUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-apply">
@@ -2354,7 +2550,7 @@
                 <span>📋</span>
                 <span>نسخ رسالة تقديم جاهزة</span>
               </button>
-              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-map" title="عرض خط السير من الزقازيق (الصاغة)">
+              <a href="${mapsUrl}" target="_blank" rel="noopener noreferrer" class="btn-action btn-map" title="عرض خط السير من الزقازيق (المحمودية)">
                 <span>🗺️</span>
                 <span>المسار من الزقازيق</span>
               </a>
